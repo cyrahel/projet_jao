@@ -6,21 +6,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>BDthèque | Accueil</title>
+    <title>BDthèque | Liste des Membres</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.4 -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- Font Awesome Icons -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- Ionicons -->
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
-    <link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <link href="../dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
     <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
           page. However, you can choose any other skin. Make sure you
           apply the skin class to the body tag so the changes take effect.
     -->
-    <link href="dist/css/skins/skin-blue.min.css" rel="stylesheet" type="text/css" />
+    <link href="../dist/css/skins/skin-blue.min.css" rel="stylesheet" type="text/css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,7 +36,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <header class="main-header">
 
         <!-- Logo -->
-        <a href="Accueil.html" class="logo">
+        <a href="../index.php" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>BD</b></span>
           <!-- logo for regular state and mobile devices -->
@@ -65,20 +65,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <li class="treeview">
               <a href="#"><i class='fa fa-link'></i> <span>Livres</span> <i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
-                <li><a href="pages/Liste_Livres.html">Liste</a></li>
-                <li><a href="pages/Ajout_Livre.html">Ajout</a></li>
+                <li><a href="Liste_Livres.php">Liste</a></li>
+                <li><a href="Ajout_Livre.php">Ajout</a></li>
               </ul>
 			  <li class="treeview">
               <a href="#"><i class='fa fa-link'></i> <span>Membres</span> <i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
-                <li><a href="pages/Liste_Membres.html">Liste</a></li>
-                <li><a href="pages/Ajout_Membre.html">Ajout</a></li>
+                <li><a href="#">Liste</a></li>
+                <li><a href="Ajout_Membre.php">Ajout</a></li>
               </ul>
 			  <li class="treeview">
               <a href="#"><i class='fa fa-link'></i> <span>Emprunts</span> <i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
-                <li><a href="pages/Liste_Emprunts.html">Liste</a></li>
-                <li><a href="pages/Ajout_Emprunt.html">Ajout</a></li>
+                <li><a href="Liste_Emprunts.php">Liste</a></li>
+                <li><a href="Ajout_Emprunt.php">Ajout</a></li>
               </ul>
             </li>
           </ul><!-- /.sidebar-menu -->
@@ -91,7 +91,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            <center>Bienvenue Admin</center>
+            Liste des Membres
           </h1>
         </section>
 
@@ -112,67 +112,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
-      
-      <!-- Control Sidebar -->   
-      <aside class="control-sidebar control-sidebar-dark">                
-        <!-- Create the tabs -->
-        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-          <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-          <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-        </ul>
-        <!-- Tab panes -->
-        <div class="tab-content">
-          <!-- Home tab content -->
-          <div class="tab-pane active" id="control-sidebar-home-tab">
-            <h3 class="control-sidebar-heading">Recent Activity</h3>
-            <ul class='control-sidebar-menu'>
-              <li>
-                <a href='javascript::;'>
-                  <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-                  <div class="menu-info">
-                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-                    <p>Will be 23 on April 24th</p>
-                  </div>
-                </a>
-              </li>              
-            </ul><!-- /.control-sidebar-menu -->
-
-            <h3 class="control-sidebar-heading">Tasks Progress</h3> 
-            <ul class='control-sidebar-menu'>
-              <li>
-                <a href='javascript::;'>               
-                  <h4 class="control-sidebar-subheading">
-                    Custom Template Design
-                    <span class="label label-danger pull-right">70%</span>
-                  </h4>
-                  <div class="progress progress-xxs">
-                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                  </div>                                    
-                </a>
-              </li>                         
-            </ul><!-- /.control-sidebar-menu -->         
-
-          </div><!-- /.tab-pane -->
-          <!-- Stats tab content -->
-          <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div><!-- /.tab-pane -->
-          <!-- Settings tab content -->
-          <div class="tab-pane" id="control-sidebar-settings-tab">            
-            <form method="post">
-              <h3 class="control-sidebar-heading">General Settings</h3>
-              <div class="form-group">
-                <label class="control-sidebar-subheading">
-                  Report panel usage
-                  <input type="checkbox" class="pull-right" checked />
-                </label>
-                <p>
-                  Some information about this general settings option
-                </p>
-              </div><!-- /.form-group -->
-            </form>
-          </div><!-- /.tab-pane -->
-        </div>
-      </aside><!-- /.control-sidebar -->
-      <!-- Add the sidebar's background. This div must be placed
            immediately after the control sidebar -->
       <div class='control-sidebar-bg'></div>
     </div><!-- ./wrapper -->
@@ -180,11 +119,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- REQUIRED JS SCRIPTS -->
 
     <!-- jQuery 2.1.4 -->
-    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <!-- Bootstrap 3.3.2 JS -->
-    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     <!-- AdminLTE App -->
-    <script src="dist/js/app.min.js" type="text/javascript"></script>
+    <script src="../dist/js/app.min.js" type="text/javascript"></script>
 
     <!-- Optionally, you can add Slimscroll and FastClick plugins.
           Both of these plugins are recommended to enhance the
