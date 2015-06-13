@@ -161,7 +161,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- page script -->
 <script type="text/javascript">
     $(function () {
-        $("#example1").dataTable();
         $('#example2').dataTable({
             "bPaginate": true,
             "bLengthChange": false,

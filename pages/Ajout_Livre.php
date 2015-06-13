@@ -79,20 +79,21 @@
               <!-- general form elements -->
               <div class="box box-primary">
                 <!-- form start -->
-                <form role="form">
+                <form action="" method="post">
                   <div class="box-body">
                     <div class="form-group">
-                      <label>Titre</label>
-                      <input type="text" class="form-control" placeholder="Titre..."/>
+                      Titre : <input type="text" name="titre" class="form-control" placeholder=""/>
                     </div>
                     <div class="form-group">
-                      <label>Auteur</label>
-                      <input type="text" class="form-control" placeholder="Auteur..."/>
+                        Auteur : <input type="text" nom="auteur" class="form-control" placeholder=""/>
                     </div>
+                      <div class="form-group">
+                          Date de parution : <input type="year" nom="parution" class="form-control" placeholder=""/>
+                      </div>
                   </div><!-- /.box-body -->
 
                   <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Valider</button>
                   </div>
                 </form>
               </div><!-- /.box -->
@@ -100,12 +101,6 @@
           </div>   <!-- /.row -->
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
-      <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-          <b>Version</b> 2.0
-        </div>
-        <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
-      </footer>
 
       <!-- Add the sidebar's background. This div must be placed
            immediately after the control sidebar -->
@@ -124,3 +119,29 @@
     <script src="../dist/js/demo.js" type="text/javascript"></script>
   </body>
 </html>
+
+<?php
+    try
+    {
+        $bdd = new PDO('mysql:host=localhost;dbname=test_livre;charset=utf8', 'root', '');
+    }
+    catch(Exception $e)
+    {
+        die('Erreur : '.$e->getMessage());
+    }
+
+    //recuperation des name
+    $titre=$_POST['titre'];
+    $auteur=$_POST['auteur'];
+    $parution=$_POST['parution'];
+
+
+    if ('$bt')
+    {
+        $bdd->query('INSERT INTO `test_livre`.`livre` (`id`, `Titre`, `Auteur`, `Parution`) VALUES (NULL, $titre, $auteur, $parution)');
+
+        echo"<div align='center'>";
+        echo"<font face='Verdana' size='3' >L'élément a bien été inséré !</font>";
+        echo"</div>";
+    }
+?>
