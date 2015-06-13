@@ -32,31 +32,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <body class="skin-blue sidebar-mini">
     <div class="wrapper">
 
-      <!-- Main Header -->
-      <header class="main-header">
-
-        <!-- Logo -->
-        <a href="../index.php" class="logo">
-          <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>BD</b></span>
-          <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>BD</b>thèque</span>
-        </a>
-
-        <!-- Header Navbar -->
-        <nav class="navbar navbar-static-top" role="navigation">
-          <!-- Sidebar toggle button-->
-          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-            <span class="sr-only">Toggle navigation</span>
-          </a>
-        </nav>
-      </header>
+        <?php include ('header.php'); ?>
 	  
       <!-- Left side column. contains the logo and sidebar -->
       <aside class="main-sidebar">
 
         <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
+        <section class="sidebar">s
 
           <!-- Sidebar Menu -->
           <ul class="sidebar-menu">
