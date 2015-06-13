@@ -29,38 +29,7 @@
       <?php include ('header.php'); ?>
 	  
       <!-- Left side column. contains the logo and sidebar -->
-      <aside class="main-sidebar">
-
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-
-          <!-- Sidebar Menu -->
-          <ul class="sidebar-menu">
-            <li class="header">MENU</li>
-            <!-- Optionally, you can add icons to the links -->
-            <li class="treeview">
-              <a href="#"><i class='fa fa-link'></i> <span>Livres</span> <i class="fa fa-angle-left pull-right"></i></a>
-              <ul class="treeview-menu">
-                <li><a href="Liste_Livres.php">Liste</a></li>
-                <li><a href="#">Ajout</a></li>
-              </ul>
-			  <li class="treeview">
-              <a href="#"><i class='fa fa-link'></i> <span>Membres</span> <i class="fa fa-angle-left pull-right"></i></a>
-              <ul class="treeview-menu">
-                <li><a href="Liste_Membres.php">Liste</a></li>
-                <li><a href="Ajout_Membre.php">Ajout</a></li>
-              </ul>
-			  <li class="treeview">
-              <a href="#"><i class='fa fa-link'></i> <span>Emprunts</span> <i class="fa fa-angle-left pull-right"></i></a>
-              <ul class="treeview-menu">
-                <li><a href="Liste_Emprunts.php">Liste</a></li>
-                <li><a href="Ajout_Emprunt.php">Ajout</a></li>
-              </ul>
-            </li>
-          </ul><!-- /.sidebar-menu -->
-        </section>
-        <!-- /.sidebar -->
-      </aside>
+        <?php include ('nav.php'); ?>
 
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
@@ -79,16 +48,16 @@
               <!-- general form elements -->
               <div class="box box-primary">
                 <!-- form start -->
-                <form action="" method="post">
+                <form action="#" method="post">
                   <div class="box-body">
                     <div class="form-group">
                       Titre : <input type="text" name="titre" class="form-control" placeholder=""/>
                     </div>
                     <div class="form-group">
-                        Auteur : <input type="text" nom="auteur" class="form-control" placeholder=""/>
+                        Auteur : <input type="text" name="auteur" class="form-control" placeholder=""/>
                     </div>
                       <div class="form-group">
-                          Date de parution : <input type="year" nom="parution" class="form-control" placeholder=""/>
+                          Date de parution : <input type="text" name="parution" class="form-control" placeholder=""/>
                       </div>
                   </div><!-- /.box-body -->
 
@@ -138,10 +107,10 @@
 
     if ('$bt')
     {
-        $bdd->query('INSERT INTO `test_livre`.`livre` (`id`, `Titre`, `Auteur`, `Parution`) VALUES (NULL, $titre, $auteur, $parution)');
+        $bdd->query("INSERT INTO `test_livre`.`livre` (`id`, `Titre`, `Auteur`, `Parution`) VALUES (NULL, $titre, $auteur, $parution)");
 
         echo"<div align='center'>";
-        echo"<font face='Verdana' size='3' >L'élément a bien été inséré !</font>";
+        echo"L'élément a bien été inséré !";
         echo"</div>";
     }
 ?>

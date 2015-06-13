@@ -41,38 +41,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <?php include ('header.php'); ?>
 
     <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar">
-
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-
-            <!-- Sidebar Menu -->
-            <ul class="sidebar-menu">
-                <li class="header">MENU</li>
-                <!-- Optionally, you can add icons to the links -->
-                <li class="treeview">
-                    <a href="#"><i class='fa fa-link'></i> <span>Livres</span> <i class="fa fa-angle-left pull-right"></i></a>
-                    <ul class="treeview-menu">
-                        <li><a href="#">Liste</a></li>
-                        <li><a href="Ajout_Livre.php">Ajout</a></li>
-                    </ul>
-                <li class="treeview">
-                    <a href="#"><i class='fa fa-link'></i> <span>Membres</span> <i class="fa fa-angle-left pull-right"></i></a>
-                    <ul class="treeview-menu">
-                        <li><a href="Liste_Membres.php">Liste</a></li>
-                        <li><a href="Ajout_Membre.php">Ajout</a></li>
-                    </ul>
-                <li class="treeview">
-                    <a href="#"><i class='fa fa-link'></i> <span>Emprunts</span> <i class="fa fa-angle-left pull-right"></i></a>
-                    <ul class="treeview-menu">
-                        <li><a href="Liste_Emprunts.php">Liste</a></li>
-                        <li><a href="Ajout_Emprunt.php">Ajout</a></li>
-                    </ul>
-                </li>
-            </ul><!-- /.sidebar-menu -->
-        </section>
-        <!-- /.sidebar -->
-    </aside>
+    <?php include ('nav.php'); ?>
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -89,7 +58,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="col-xs-12">
                     <div class="box">
                         <div class="box-body">
-                            <table id="example2" class="table table-bordered table-hover">
+                            <table id="Livre" class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
                                     <th>id</th>
@@ -109,7 +78,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             die('Erreur : '.$e->getMessage());
                                         }
 
-                                        $reponse = $bdd->query('SELECT * FROM livre');
+                                        $reponse = $bdd->query("SELECT * FROM livre");
                                         while ($donnees = $reponse->fetch())
                                         {
                                             echo '<tr></tr><td>'.$donnees['id'].'</td> <td>'.$donnees['Titre'].'</td> <td>'.$donnees['Auteur'].'</td> <td>'.$donnees['Parution'].'</td></tr>';
@@ -161,7 +130,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- page script -->
 <script type="text/javascript">
     $(function () {
-        $('#example2').dataTable({
+        $('#Livre').dataTable({
             "bPaginate": true,
             "bLengthChange": false,
             "bFilter": false,
