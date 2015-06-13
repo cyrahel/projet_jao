@@ -103,14 +103,8 @@
     $titre=$_POST['titre'];
     $auteur=$_POST['auteur'];
     $parution=$_POST['parution'];
-
-
-    if ('$bt')
-    {
-        $bdd->query("INSERT INTO `test_livre`.`livre` (`id`, `Titre`, `Auteur`, `Parution`) VALUES (NULL, $titre, $auteur, $parution)");
-
-        echo"<div align='center'>";
-        echo"L'élément a bien été inséré !";
-        echo"</div>";
-    }
+    $bdd->query("INSERT INTO 'livre'('id', 'Titre', 'Auteur', 'Parution') VALUES (NULL, $titre, $auteur, $parution)");
+    echo"<div align='center'>";
+    echo"L'élément a bien été inséré !";
+    echo"</div>";
 ?>
