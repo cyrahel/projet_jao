@@ -48,17 +48,14 @@
               <!-- general form elements -->
               <div class="box box-primary">
                 <!-- form start -->
-                <form action="#" method="post">
+                <form action="add_Livre.php" method="post">
                   <div class="box-body">
                     <div class="form-group">
-                      Titre : <input type="text" name="titre" class="form-control" placeholder=""/>
+                      Titre : <input type="text" name="titre" id= "titre" class="form-control" placeholder=""/>
                     </div>
                     <div class="form-group">
-                        Auteur : <input type="text" name="auteur" class="form-control" placeholder=""/>
+                        Auteur : <input type="text" name="auteur" id= "auteur" class="form-control" placeholder=""/>
                     </div>
-                      <div class="form-group">
-                          Date de parution : <input type="text" name="parution" class="form-control" placeholder=""/>
-                      </div>
                   </div><!-- /.box-body -->
 
                   <div class="box-footer">
@@ -88,23 +85,3 @@
     <script src="../dist/js/demo.js" type="text/javascript"></script>
   </body>
 </html>
-
-<?php
-    try
-    {
-        $bdd = new PDO('mysql:host=localhost;dbname=test_livre;charset=utf8', 'root', '');
-    }
-    catch(Exception $e)
-    {
-        die('Erreur : '.$e->getMessage());
-    }
-
-    //recuperation des name
-    $titre=$_POST['titre'];
-    $auteur=$_POST['auteur'];
-    $parution=$_POST['parution'];
-    $bdd->query("INSERT INTO 'livre'('id', 'Titre', 'Auteur', 'Parution') VALUES (NULL, $titre, $auteur, $parution)");
-    echo"<div align='center'>";
-    echo"L'élément a bien été inséré !";
-    echo"</div>";
-?>

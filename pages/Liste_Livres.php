@@ -64,7 +64,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <th>id</th>
                                     <th>Titre</th>
                                     <th>Auteur</th>
-                                    <th>Parution</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -81,7 +80,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         $reponse = $bdd->query("SELECT * FROM livre");
                                         while ($donnees = $reponse->fetch())
                                         {
-                                            echo '<tr></tr><td>'.$donnees['id'].'</td> <td>'.$donnees['Titre'].'</td> <td>'.$donnees['Auteur'].'</td> <td>'.$donnees['Parution'].'</td></tr>';
+                                            echo '<tr></tr><td>'.$donnees['id'].'</td> <td>'.$donnees['Titre'].'</td> <td>'.$donnees['Auteur'].'</td></tr>';
                                         }
                                         $reponse->closeCursor();
                                     ?>
@@ -91,7 +90,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <th>id</th>
                                     <th>Titre</th>
                                     <th>Auteur</th>
-                                    <th>Parution</th>
                                 </tr>
                                 </tfoot>
                             </table>
